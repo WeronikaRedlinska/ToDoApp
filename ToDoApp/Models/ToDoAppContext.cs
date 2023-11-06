@@ -9,10 +9,12 @@ namespace ToDoApp.Models{
     public class ToDoAppContext : DbContext{
         public ToDoAppContext(DbContextOptions<ToDoAppContext> options) : base(options){ }
 
-        public DbSet<ToDo> ToDos {get; set;} = null!;
-        public DbSet<Category> Categories {get; set;} = null!;
+        public ToDoAppContext(){}
 
-        public DbSet<Status> Statuses {get; set;} = null!;
+        public virtual DbSet<ToDo> ToDos {get; set;} = null!;
+        public virtual DbSet<Category> Categories {get; set;} = null!;
+
+        public virtual DbSet<Status> Statuses {get; set;} = null!;
 
        
 
